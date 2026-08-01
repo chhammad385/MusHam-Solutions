@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+
+/* global.css owns the design system: tokens, reset, base element styles,
+   components (.btn/.card/.glass/...), and the dark theme.
+ *
+ * layer(base) is load-bearing, not cosmetic. global.css contains an unlayered
+ * reset (`* { margin: 0; padding: 0 }`) and element rules (`h1 { font-size }`).
+ * Unlayered CSS wins over every cascade layer regardless of specificity, so
+ * without this the reset silently beats all Tailwind spacing utilities and the
+ * element rules beat text-size utilities on headings. Assigning the import to
+ * `base` puts it before Tailwind's `utilities` layer, so utilities win as
+ * intended. Tailwind v4 declares the order: theme, base, components, utilities. */
+@import './global.css' layer(base);
+
+/* Tailwind v4 is configured here in CSS, not in a tailwind.config.js file.
+   Every custom property in @theme becomes a utility class, e.g.
+   --color-brand-500 -> bg-brand-500 / text-brand-500 / border-brand-500.
+
+   These are Tailwind's own utility tokens and sit alongside the global.css
+   variables. To use a design-system token in a utility, reference it directly:
+   class="bg-[var(--color-card)] text-[var(--color-text-secondary)]" */
+@theme {
+  --color-brand-50: oklch(0.97 0.02 250);
+  --color-brand-100: oklch(0.93 0.04 250);
+  --color-brand-200: oklch(0.87 0.07 250);
+  --color-brand-300: oklch(0.79 0.11 250);
+  --color-brand-400: oklch(0.7 0.15 250);
+  --color-brand-500: oklch(0.62 0.19 250);
+  --color-brand-600: oklch(0.54 0.18 250);
+  --color-brand-700: oklch(0.45 0.15 250);
+  --color-brand-800: oklch(0.37 0.12 250);
+  --color-brand-900: oklch(0.29 0.09 250);
+
+  --color-ink: oklch(0.18 0.01 250);
+  --color-muted: oklch(0.55 0.01 250);
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Satoshi', 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
