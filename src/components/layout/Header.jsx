@@ -109,12 +109,7 @@ export function Header() {
             href="#home"
             className="flex items-center"
           >
-            <div className={cn(
-              "transition-all duration-300",
-              theme === 'dark' && "bg-white/90 p-1.5 rounded-lg shadow-sm"
-            )}>
-              <img src="/logo.png" alt="MusHam Solutions Logo" className="h-12 md:h-14 w-auto object-contain" />
-            </div>
+            <img src="/logo.png" alt="MusHam Solutions Logo" className="h-12 md:h-14 w-auto object-contain" />
           </a>
 
           <ul className="hidden items-center gap-8 lg:flex">

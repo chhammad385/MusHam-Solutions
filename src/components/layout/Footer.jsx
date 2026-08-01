@@ -149,12 +149,7 @@ export function Footer({ onScrollTop }) {
             <div
               className="flex items-center"
             >
-              <div className={cn(
-                "transition-all duration-300",
-                theme === 'dark' && "bg-white/90 p-1.5 rounded-lg shadow-sm"
-              )}>
-                <img src="/logo.png" alt="MusHam Solutions Logo" className="h-12 md:h-14 w-auto object-contain" />
-              </div>
+              <img src="/logo.png" alt="MusHam Solutions Logo" className="h-12 md:h-14 w-auto object-contain" />
             </div>
             <p className="mt-3 max-w-[40ch] text-[length:var(--text-sm)] text-[var(--color-text-secondary)]">
               An AI-first product studio building software teams actually enjoy
