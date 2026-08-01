@@ -10,6 +10,7 @@ import {
 } from '@/components/icons/brands'
 import { Reveal } from '@/components/ui/Reveal'
 import { cn } from '@/utils/cn'
+import { useTheme } from '@/hooks/useTheme'
 
 const COLUMNS = [
   {
@@ -118,6 +119,7 @@ function Newsletter() {
 
 export function Footer({ onScrollTop }) {
   const reduced = useReducedMotion()
+  const { theme } = useTheme()
 
   const handleScrollTop = () => {
     // Lenis owns scrolling. App.jsx should pass its scrollTo so the two do not
@@ -147,7 +149,12 @@ export function Footer({ onScrollTop }) {
             <div
               className="flex items-center"
             >
-              <img src="/logo.png" alt="MusHam Solutions Logo" className="h-12 md:h-14 w-auto object-contain" />
+              <div className={cn(
+                "transition-all duration-300",
+                theme === 'dark' && "bg-white/90 p-1.5 rounded-lg shadow-sm"
+              )}>
+                <img src="/logo.png" alt="MusHam Solutions Logo" className="h-12 md:h-14 w-auto object-contain" />
+              </div>
             </div>
             <p className="mt-3 max-w-[40ch] text-[length:var(--text-sm)] text-[var(--color-text-secondary)]">
               An AI-first product studio building software teams actually enjoy
