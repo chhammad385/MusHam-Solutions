@@ -8,8 +8,8 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { cn } from '@/utils/cn'
 
 // Placeholder contact details — swap for the real ones.
-const EMAIL = 'hello@musham.solutions'
-const WHATSAPP_NUMBER = '910000000000' // digits only, country code first
+const EMAIL = 'mushamsolutions@gmail.com'
+const WHATSAPP_NUMBER = '923056432815' // digits only, country code first
 const LOCATION = 'Pakistan, Lahore'
 
 const BUDGETS = [
@@ -32,8 +32,8 @@ const CHANNELS = [
   {
     icon: MessageCircle,
     label: 'WhatsApp',
-    value: 'Message us directly',
-    href: `https://wa.me/${WHATSAPP_NUMBER}`,
+    value: '+92 305 6432815',
+    href: `https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20MusHam%20Solutions,%20I'm%20interested%20in%20working%20with%20you!`,
     external: true,
   },
   {
