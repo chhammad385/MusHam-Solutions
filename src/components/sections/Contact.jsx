@@ -67,7 +67,7 @@ function validate(values) {
   return errors
 }
 
-const EMPTY = { name: '', email: '', company: '', budget: '', message: '' }
+const EMPTY = { name: '', email: '', phone: '', company: '', budget: '', message: '' }
 
 const FIELD_CLASSES = cn(
   'w-full rounded-[var(--radius-input)] border border-[var(--color-border)]',
@@ -145,6 +145,7 @@ function ContactForm() {
         {
           from_name: values.name,
           reply_to: values.email,
+          phone: values.phone || 'None',
           company: values.company || 'None',
           budget: values.budget || 'None',
           message: values.message,
@@ -226,6 +227,18 @@ function ContactForm() {
         </div>
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+          <Field id="phone" label="Phone Number" optional>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autoComplete="tel"
+              value={values.phone}
+              onChange={setField('phone')}
+              className={FIELD_CLASSES}
+            />
+          </Field>
+
           <Field id="company" label="Company" optional>
             <input
               id="company"
@@ -237,7 +250,9 @@ function ContactForm() {
               className={FIELD_CLASSES}
             />
           </Field>
+        </div>
 
+        <div className="grid grid-cols-1 gap-5">
           <Field id="budget" label="Project budget" optional>
             <select
               id="budget"
