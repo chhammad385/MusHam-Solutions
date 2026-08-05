@@ -53,10 +53,10 @@ const COLUMNS = [
 ]
 
 const SOCIALS = [
-  { label: 'GitHub', href: 'https://github.com', Icon: GithubIcon },
+  { label: 'GitHub', href: 'https://github.com/mushamsolutions-tech', Icon: GithubIcon },
   { label: 'X', href: 'https://x.com', Icon: XIcon },
   { label: 'LinkedIn', href: 'https://linkedin.com', Icon: LinkedinIcon },
-  { label: 'Instagram', href: 'https://instagram.com', Icon: InstagramIcon },
+  { label: 'Instagram', href: 'https://www.instagram.com/musham_solutions/', Icon: InstagramIcon },
 ]
 
 function Newsletter() {
