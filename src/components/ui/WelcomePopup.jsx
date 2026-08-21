@@ -15,7 +15,7 @@ const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponen
 
 // Long enough for the hero to paint and settle, short enough that it still
 // reads as part of the page load.
-const OPEN_DELAY_MS = 1400
+const OPEN_DELAY_MS = 2000
 
 /**
  * Welcome prompt that fades in shortly after the site loads and hands the
