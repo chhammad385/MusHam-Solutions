@@ -12,6 +12,7 @@ import { TechStack } from '@/components/sections/TechStack'
 import { Testimonials } from '@/components/sections/Testimonials'
 import { FAQ } from '@/components/sections/FAQ'
 import { Contact } from '@/components/sections/Contact'
+import { WelcomePopup } from '@/components/ui/WelcomePopup'
 import { useSmoothScroll } from '@/hooks/useSmoothScroll'
 
 /**
@@ -126,6 +127,8 @@ function App() {
       </AnimatePresence>
 
       <Footer onScrollTop={scrollToTop} />
+
+      <WelcomePopup lenis={lenis} />
     </div>
   )
 }
